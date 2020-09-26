@@ -8,7 +8,7 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 import time
-#driver = webdriver.Firefox()
+
 # function tearDown
 def tearDown(self):
     self.driver.stop_client()
