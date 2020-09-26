@@ -9,6 +9,11 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 import time
 #driver = webdriver.Firefox()
+# function tearDown
+def tearDown(self):
+    self.driver.stop_client()
+    self.driver.stop()
+
 driver = webdriver.Chrome()
 driver.maximize_window()
 time.sleep(5)
@@ -22,8 +27,10 @@ inputPassword.send_keys('Testing@2b')
 buttonLogin = driver.find_element_by_xpath("//*[contains(@name,'commit')]")
 time.sleep(5)
 buttonLogin.click();
-appFrame = Select(driver.find_element_by_xpath("//iframe[@title='Super-Reports-QA']"))
+# tearDown(driver)
+# appFrame = Select(driver.find_element_by_xpath("//iframe[@title='Super-Reports-QA']"))
 menuReports = driver.find_element_by_xpath("//li[.='Reports']")
+menuReports.click();
 if not menuReports:
     print("Ton tai element")
 else:
