@@ -27,11 +27,12 @@ inputPassword.send_keys('Testing@2b')
 buttonLogin = driver.find_element_by_xpath("//*[contains(@name,'commit')]")
 time.sleep(5)
 buttonLogin.click();
+# driver.quit()
 # tearDown(driver)
 # appFrame = Select(driver.find_element_by_xpath("//iframe[@title='Super-Reports-QA']"))
-menuReports = driver.find_element_by_xpath("//li[.='Reports']")
-menuReports.click();
-if not menuReports:
-    print("Ton tai element")
-else:
-    print("Khong ton tai element")
+# menuReports = driver.find_element_by_xpath("//li[.='Reports']")
+# menuReports.click();
+# if not menuReports:
+#     print("Ton tai element")
+# else:
+#     print("Khong ton tai element")
