@@ -40,5 +40,5 @@ inputElementbyId(email_id, email_value)
 clickElementbyXpath(next_xpath)
 inputElementbyId(password_id, password_value)
 clickElementbyXpath(login_xpath)
-# closeBrowser()
+closeBrowser()
 
